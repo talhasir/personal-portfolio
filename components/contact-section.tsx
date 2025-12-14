@@ -18,8 +18,14 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+
+    // Construct mailto link
+    const subject = `Contact from Portfolio: ${formData.interest || "General Inquiry"}`
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
+
+    window.location.href = `mailto:talhahafiz145@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`
+
+    console.log("Opening email client with:", formData)
   }
 
   return (
@@ -36,13 +42,13 @@ export function ContactSection() {
             {/* Contact Options */}
             <div className="space-y-4">
               <a
-                href="mailto:talha@autonomia.ai"
+                href="mailto:talhahafiz145@gmail.com"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
               >
                 <div className="p-3 glass rounded-lg group-hover:glow-accent transition-all">
                   <Mail className="h-5 w-5" />
                 </div>
-                <span>talha@autonomia.ai</span>
+                <span>talhahafiz145@gmail.com</span>
               </a>
               <a
                 href="https://linkedin.com/in/hafiztalha"
@@ -56,7 +62,7 @@ export function ContactSection() {
                 <span>/in/hafiztalha</span>
               </a>
               <a
-                href="https://github.com/hafiztalha"
+                href="https://github.com/talhasir"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"

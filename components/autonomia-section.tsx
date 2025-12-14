@@ -49,13 +49,15 @@ export function AutonomiaSection() {
             </ul>
 
             {/* CTA */}
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-[#00FFF0] transition-all duration-200 group"
-            >
-              Schedule a Consultation
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="#contact">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-[#00FFF0] transition-all duration-200 group"
+              >
+                Schedule a Consultation
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
 
           {/* Right Visual - Agent Architecture Diagram */}

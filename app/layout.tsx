@@ -15,7 +15,7 @@ const _jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Hafiz Talha | Founder & Senior AI Engineer",
   description:
-    "Founder of Autonomia & Senior AI Engineer at Rozee.pk. Building autonomous AI systems that execute enterprise workflows without human intervention.",
+    "Founder of Autonomia & Senior AI Engineer. I merge battle-tested backend architectures with cutting-edge Agentic AI to build autonomous systems that execute enterprise workflows without human intervention.",
   keywords: ["Agentic AI", "Laravel Developer", "AI Automation", "Senior PHP Engineer", "WhatsApp Business API"],
   authors: [{ name: "Hafiz Talha" }],
   openGraph: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Building autonomous AI systems that execute enterprise workflows.",
     type: "website",
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({

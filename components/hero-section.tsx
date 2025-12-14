@@ -22,27 +22,31 @@ export function HeroSection() {
 
             {/* Sub-headline */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-[540px] leading-relaxed">
-              Founder of <span className="text-foreground font-semibold">Autonomia</span> & Senior AI Engineer at
-              Rozee.pk. I merge battle-tested Laravel architectures with cutting-edge Agentic AI to build autonomous
+              Founder of <span className="text-foreground font-semibold">Autonomia</span> & Senior Software Engineer.
+              I merge battle-tested backend architectures with cutting-edge Agentic AI to build autonomous
               systems that execute enterprise workflows without human intervention.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-[#00FFF0] transition-all duration-200 group"
-              >
-                Explore Autonomia
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border text-foreground hover:bg-secondary transition-colors bg-transparent"
-              >
-                Technical Portfolio
-              </Button>
+              <a href="#autonomia">
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-[#00FFF0] transition-all duration-200 group w-full sm:w-auto"
+                >
+                  Explore Autonomia
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="#work">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-border text-foreground hover:bg-secondary transition-colors bg-transparent w-full sm:w-auto"
+                >
+                  Technical Portfolio
+                </Button>
+              </a>
             </div>
 
             {/* Social Proof Bar */}
@@ -53,7 +57,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Briefcase className="h-4 w-4 text-primary" />
-                <span>3.5+ Years Production</span>
+                <span>4+ Years Production</span>
               </div>
               <div className="flex items-center gap-2">
                 <Bot className="h-4 w-4 text-primary" />

@@ -73,7 +73,7 @@ export function AutonomiaSection() {
               </div>
 
               {/* Metrics Row */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="bg-secondary/50 rounded-lg p-4 text-center">
                   <p className="text-2xl font-bold text-primary">47</p>
                   <p className="text-xs text-muted-foreground">Active Agents</p>
@@ -89,26 +89,36 @@ export function AutonomiaSection() {
               </div>
 
               {/* Flow Diagram */}
-              <div className="flex items-center justify-between gap-4 py-4">
-                <div className="flex-1 glass rounded-lg p-4 text-center border border-primary/20">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-4">
+                <div className="flex-1 w-full md:w-auto glass rounded-lg p-4 text-center border border-primary/20">
                   <MessageSquare className="h-6 w-6 text-primary mx-auto mb-2" />
                   <p className="text-xs font-medium text-foreground">User Request</p>
                 </div>
-                <div className="flex items-center">
+                <div className="flex md:hidden flex-col items-center gap-1">
+                  <div className="h-4 w-0.5 bg-primary/50" />
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                  <div className="h-4 w-0.5 bg-primary/50" />
+                </div>
+                <div className="hidden md:flex items-center">
                   <div className="w-8 h-0.5 bg-primary/50" />
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <div className="w-8 h-0.5 bg-primary/50" />
                 </div>
-                <div className="flex-1 glass rounded-lg p-4 text-center border border-primary/20 glow-accent">
+                <div className="flex-1 w-full md:w-auto glass rounded-lg p-4 text-center border border-primary/20 glow-accent">
                   <Cpu className="h-6 w-6 text-primary mx-auto mb-2" />
                   <p className="text-xs font-medium text-foreground">Agent Brain</p>
                 </div>
-                <div className="flex items-center">
+                <div className="flex md:hidden flex-col items-center gap-1">
+                  <div className="h-4 w-0.5 bg-primary/50" />
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                  <div className="h-4 w-0.5 bg-primary/50" />
+                </div>
+                <div className="hidden md:flex items-center">
                   <div className="w-8 h-0.5 bg-primary/50" />
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   <div className="w-8 h-0.5 bg-primary/50" />
                 </div>
-                <div className="flex-1 glass rounded-lg p-4 text-center border border-primary/20">
+                <div className="flex-1 w-full md:w-auto glass rounded-lg p-4 text-center border border-primary/20">
                   <Database className="h-6 w-6 text-primary mx-auto mb-2" />
                   <p className="text-xs font-medium text-foreground">Your Systems</p>
                 </div>

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { profile } from "@/content/profile"
 import { site } from "@/content/site"
 import { ButtonLink } from "@/components/ui"
@@ -21,10 +21,6 @@ export function Hero() {
             <ButtonLink href="/#work">
               {site.hero.workButton}
               <ArrowRight className="h-4 w-4" aria-hidden />
-            </ButtonLink>
-            <ButtonLink href={profile.cvPath} variant="secondary" download>
-              <Download className="h-4 w-4" aria-hidden />
-              {site.hero.cvButton}
             </ButtonLink>
             <SocialLinks className="ml-1" />
           </div>

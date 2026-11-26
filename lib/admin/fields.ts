@@ -52,7 +52,6 @@ export const SECTIONS: Section[] = [
         text("location", "Location"),
         text("email", "Email"),
         text("siteUrl", "Site address", { help: "The full public address, like https://hafiz-talha.vercel.app" }),
-        image("cvPath", "CV (PDF)", { accept: "pdf" }),
         {
           kind: "group", key: "links", label: "Profile links", fields: [
             { kind: "group", key: "linkedin", label: "LinkedIn", fields: [text("label", "Shown as"), text("href", "Link")] },
@@ -196,7 +195,7 @@ export const SECTIONS: Section[] = [
     root: {
       kind: "group", key: "", label: "Site text", fields: [
         { kind: "group", key: "seo", label: "Search engines", fields: [text("title", "Page title"), long("description", "Description"), strings("keywords", "Keywords")] },
-        { kind: "group", key: "hero", label: "Hero", fields: [text("workButton", "Work button"), text("cvButton", "CV button"), text("builtForLabel", "Logo strip label")] },
+        { kind: "group", key: "hero", label: "Hero", fields: [text("workButton", "Work button"), text("builtForLabel", "Logo strip label")] },
         heading("about", "About", [["eyebrow", "Eyebrow"]]),
         heading("vision", "Vision", [["eyebrow", "Eyebrow"], ["title", "Title"]]),
         {

@@ -10,7 +10,6 @@ export interface Profile {
   location: string
   email: string
   siteUrl: string
-  cvPath: string
   photo: string
   links: {
     linkedin: { label: string; href: string }

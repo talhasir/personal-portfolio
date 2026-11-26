@@ -3,7 +3,7 @@ import data from "./data/site.json"
 /** Section headings, intros, button labels and SEO text. Edited in the portal (/admin). */
 export interface SiteText {
   seo: { title: string; description: string; keywords: string[] }
-  hero: { workButton: string; cvButton: string; builtForLabel: string }
+  hero: { workButton: string; builtForLabel: string }
   about: { eyebrow: string }
   vision: { eyebrow: string; title: string }
   achievements: { eyebrow: string; title: string; intro: string; reviewsTitle: string; reviewsIntro: string; reviewsButton: string }

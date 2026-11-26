@@ -268,7 +268,6 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} {profile.fullName}</p>
         </div>
         <div className="flex items-center gap-4">
-          <a href={profile.cvPath} download className="font-semibold text-blue-700 hover:underline">{site.hero.cvButton}</a>
           <SocialLinks />
         </div>
       </div>

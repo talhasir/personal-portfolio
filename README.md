@@ -48,8 +48,6 @@ If two saves race, the second is refused with "This content changed", so nothing
 
 **Adding a field.** Describe it once in `lib/admin/fields.ts`; the form and the server-side check are both built from it.
 
-The CV download is set in the portal (Profile, CV); the current file is `public/Hafiz_Talha_CV.pdf`.
-
 ## Contact form
 
 The form posts to `app/api/contact/route.ts`, which sends through Resend.

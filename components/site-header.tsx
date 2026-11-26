@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Download, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { profile } from "@/content/profile"
-import { site } from "@/content/site"
 import { cn } from "@/lib/utils"
 import { Signature } from "@/components/signature"
 
@@ -39,10 +38,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <a href={profile.cvPath} download className="inline-flex h-9 items-center gap-2 border border-blue bg-blue px-3.5 text-[13.5px] font-semibold text-white hover:bg-blue-700">
-            <Download className="h-4 w-4" aria-hidden />
-            {site.hero.cvButton}
-          </a>
         </nav>
         <button type="button" className="inline-flex h-10 w-10 items-center justify-center border border-hair md:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -55,10 +50,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <a href={profile.cvPath} download className="mt-4 inline-flex h-11 items-center gap-2 border border-blue bg-blue px-4 text-[14px] font-semibold text-white">
-            <Download className="h-4 w-4" aria-hidden />
-            {site.hero.cvButton}
-          </a>
         </nav>
       )}
     </header>

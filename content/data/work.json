@@ -1,0 +1,900 @@
+[
+  {
+    "slug": "serpdashboard",
+    "title": "SerpDashboard",
+    "context": "SERPDashboard.com",
+    "role": "System Owner & Lead Software Engineer",
+    "period": "Mar 2026 to present",
+    "summary": "An SEO and domain automation SaaS I own end to end: from finding expired domains to building, monitoring and repairing the websites on them.",
+    "categories": [
+      "saas",
+      "ai",
+      "integrations"
+    ],
+    "image": {
+      "src": "/work/serpdashboard-hq.jpg",
+      "alt": "The SerpDashboard logo"
+    },
+    "logo": "/logos/serpdashboard.svg",
+    "figures": [
+      {
+        "value": "1M+",
+        "label": "Domains in faceted search"
+      },
+      {
+        "value": "10+",
+        "label": "External APIs integrated"
+      },
+      {
+        "value": "4",
+        "label": "AI providers behind one layer"
+      }
+    ],
+    "stack": [
+      "PHP 8.3",
+      "Laravel 13",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Redis",
+      "OpenSearch",
+      "Python",
+      "Node.js",
+      "Playwright"
+    ],
+    "problem": "Running websites on expired domains takes many steps: finding domains, registering them, hosting and building the sites, then checking each site. SerpDashboard does all of it in one system and shows what happened at each step.",
+    "built": [
+      "A domain-to-website pipeline: registration with Dynadot, NameSilo and Name.com, WHM/cPanel, cloud and Cloudflare R2 hosting, SSL, and automated site builds, with watchdogs for every step.",
+      "A provider-agnostic AI layer (OpenAI, Anthropic, Gemini, Groq) with versioned prompts per operation, structured JSON outputs, per-module budgets, and a log and cost record for every call.",
+      "Bernard, an AI agent that gives daily per-client domain recommendations and monitors websites with fix suggestions.",
+      "An AI website-repair pipeline: it scans live sites in headless Chrome, recovers lost content from Archive.org, has AI propose fixes, routes each change to human approval, then applies and verifies it with one-click restore.",
+      "A drop-catch engine in Node.js and TypeScript over Redis Streams, with RDAP-based drop-time prediction.",
+      "Faceted search over OpenSearch for 1M+ crawler-scored domains, with an incremental indexer and 50+ filters."
+    ],
+    "architecture": [
+      {
+        "title": "Sources",
+        "items": [
+          "Registrars",
+          "Crawler data",
+          "Archive.org",
+          "Webhooks"
+        ]
+      },
+      {
+        "title": "Core (Laravel)",
+        "items": [
+          "Services and queues",
+          "AI layer",
+          "Approval workflow",
+          "RBAC"
+        ]
+      },
+      {
+        "title": "Workers",
+        "items": [
+          "Python AI service",
+          "Node.js drop-catch",
+          "Headless Chrome checks"
+        ]
+      },
+      {
+        "title": "Outputs",
+        "items": [
+          "Live websites",
+          "React dashboard",
+          "Client portal",
+          "Reports"
+        ]
+      }
+    ],
+    "reliability": [
+      "Inbound webhooks are stored before processing, so events can be replayed and are never handled twice.",
+      "Retries with backoff for rate limits and host blocks; one rate limiter shared by PHP and Python workers.",
+      "Atomic file writes with automatic rollback, and disk checks before any change goes live.",
+      "Every change on a live site is backed up first and can be restored in one click."
+    ],
+    "owned": [
+      "Architecture and data model",
+      "Backend and APIs",
+      "AI layer and agents",
+      "Integrations",
+      "React frontend",
+      "Releases and production support"
+    ]
+  },
+  {
+    "slug": "bernard",
+    "title": "Bernard AI",
+    "context": "The AI agent inside SerpDashboard",
+    "role": "System Owner & Lead Software Engineer",
+    "period": "Mar 2026 to present",
+    "summary": "An AI agent that recommends domains to each client every day and repairs live websites, with every change approved by a person and undoable.",
+    "categories": [
+      "ai",
+      "saas"
+    ],
+    "image": {
+      "src": "/work/bernard-hq.jpg",
+      "alt": "AWA Enhancement, powered by Bernard: run finished"
+    },
+    "logo": "/logos/bernard.png",
+    "figures": [
+      {
+        "value": "Daily",
+        "label": "Per-client recommendations"
+      },
+      {
+        "value": "6 stages",
+        "label": "Scan to verify, per website"
+      },
+      {
+        "value": "1 click",
+        "label": "Restore of any change"
+      }
+    ],
+    "stack": [
+      "Python",
+      "OpenAI",
+      "Anthropic",
+      "Gemini",
+      "Groq",
+      "Laravel",
+      "Playwright",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "problem": "Websites rebuilt from archived copies lose things: content, images, alt text, even whole stylesheets. Fixing each site by hand does not scale, and letting an AI change live sites on its own is not safe.",
+    "built": [
+      "A Python AI service with its own database, connected to the Laravel core over HTTP.",
+      "Daily per-client domain recommendations using RAG, tool use and structured JSON outputs.",
+      "A six-stage website-repair pipeline: scan every page (including in headless Chrome), recover what the original site had from Archive.org, let AI write only what cannot be recovered, human review, apply with backups, then verify on the live site.",
+      "Repair CSS written from screenshots by vision models when a layout lost its stylesheet, with the page's own HTML as context.",
+      "Every AI proposal is checked in code before a person sees it, for example CSS may only name classes the page really has."
+    ],
+    "architecture": [
+      {
+        "title": "Inputs",
+        "items": [
+          "Live website",
+          "Archive.org",
+          "Crawler data"
+        ]
+      },
+      {
+        "title": "Bernard",
+        "items": [
+          "Python AI service",
+          "LLM and vision models",
+          "Rule checks"
+        ]
+      },
+      {
+        "title": "Control",
+        "items": [
+          "Human approval",
+          "Backups",
+          "Budgets"
+        ]
+      },
+      {
+        "title": "Outputs",
+        "items": [
+          "Recommendations",
+          "Site fixes",
+          "Verified results"
+        ]
+      }
+    ],
+    "reliability": [
+      "Nothing reaches a live site without a person's approval, and every change can be restored in one click.",
+      "After a fix goes live, the pages are checked again in a browser; what is still wrong goes back for one more round.",
+      "Each run has an AI budget, and every call is logged with its model and cost."
+    ],
+    "owned": [
+      "Agent design",
+      "Python AI service",
+      "Prompts and structured outputs",
+      "Approval workflow",
+      "Live verification"
+    ]
+  },
+  {
+    "slug": "rozee",
+    "title": "Rozee.pk",
+    "context": "Pakistan's largest job platform",
+    "role": "Lead Software Engineer",
+    "period": "Nov 2024 to Feb 2026",
+    "summary": "Core systems for a recruitment platform serving 100,000+ users: AI screening, faster search, messaging and CRM integrations.",
+    "categories": [
+      "saas",
+      "ai",
+      "integrations"
+    ],
+    "image": {
+      "src": "/work/rozee-hq.jpg",
+      "alt": "The Rozee.pk home page",
+      "address": "rozee.pk"
+    },
+    "logo": "/logos/rozee.svg",
+    "figures": [
+      {
+        "value": "100,000+",
+        "label": "Users served"
+      },
+      {
+        "value": "2s to 500ms",
+        "label": "Search response time"
+      },
+      {
+        "value": "12+",
+        "label": "CRM integrations"
+      }
+    ],
+    "stack": [
+      "PHP",
+      "Laravel",
+      "Livewire",
+      "MySQL",
+      "Apache Solr",
+      "OpenAI",
+      "WhatsApp Business API",
+      "Twilio",
+      "Meta Conversions API"
+    ],
+    "problem": "A high-traffic job platform needed faster search, automated candidate screening and reliable messaging, without slowing down weekly releases.",
+    "built": [
+      "Backend architecture and REST APIs in PHP, Laravel and Livewire, shipped to production several times a week.",
+      "An AI screening pipeline on OpenAI and Anthropic models, processing 5,000+ candidates a week.",
+      "WhatsApp Business API and Twilio messaging with templates and webhooks for inbound messages and delivery status.",
+      "Server-side conversion events through Meta Conversions API, so ad attribution reflects real sign-ups and applications.",
+      "REST APIs for 12+ external CRM integrations."
+    ],
+    "architecture": [
+      {
+        "title": "Channels",
+        "items": [
+          "Web app",
+          "WhatsApp",
+          "Email"
+        ]
+      },
+      {
+        "title": "Platform",
+        "items": [
+          "Laravel APIs",
+          "Queues and cron",
+          "MySQL"
+        ]
+      },
+      {
+        "title": "Search and AI",
+        "items": [
+          "Apache Solr",
+          "Embeddings",
+          "LLM screening"
+        ]
+      },
+      {
+        "title": "Outside systems",
+        "items": [
+          "CRMs",
+          "Meta Conversions API",
+          "Twilio"
+        ]
+      }
+    ],
+    "reliability": [
+      "Query optimisation, indexing and caching cut core search from 2s to 500ms.",
+      "Event-driven automation with queues and cron pipelines for indexing and data lifecycle.",
+      "PHPUnit tests on core modules to stop regressions."
+    ],
+    "owned": [
+      "Backend architecture",
+      "AI screening pipeline",
+      "Search performance",
+      "Messaging and attribution integrations",
+      "Code reviews and mentoring"
+    ]
+  },
+  {
+    "slug": "rozeena",
+    "title": "Rozeena AI",
+    "context": "Rozee.pk",
+    "role": "Lead Software Engineer",
+    "period": "At Rozee.pk",
+    "summary": "An enterprise multi-agent WhatsApp assistant: three AI agents that work together and hand off to each other.",
+    "categories": [
+      "ai",
+      "integrations"
+    ],
+    "image": {
+      "src": "/work/recruit-ai-hq.jpg",
+      "alt": "The Recruit AI home page",
+      "address": "recruit-ai.co"
+    },
+    "logo": "/logos/recruit-ai.png",
+    "figures": [
+      {
+        "value": "3",
+        "label": "AI agents working together"
+      },
+      {
+        "value": "WhatsApp",
+        "label": "Business API channel"
+      },
+      {
+        "value": "Handoff",
+        "label": "Between agents"
+      }
+    ],
+    "stack": [
+      "OpenAI",
+      "WhatsApp Business API",
+      "Laravel",
+      "Webhooks"
+    ],
+    "problem": "Job seekers ask the same support and career questions all day on WhatsApp. A single chatbot could not cover support, career advice and job matching well.",
+    "built": [
+      "A WhatsApp career assistant run by three AI agents that collaborate and hand conversations off to each other.",
+      "Built on the WhatsApp Business API, connected to the Rozee.pk platform."
+    ],
+    "architecture": [
+      {
+        "title": "Channel",
+        "items": [
+          "WhatsApp Business API",
+          "Webhooks"
+        ]
+      },
+      {
+        "title": "Agents",
+        "items": [
+          "3 AI agents",
+          "Handoff between agents"
+        ]
+      },
+      {
+        "title": "Platform",
+        "items": [
+          "Rozee.pk data"
+        ]
+      }
+    ],
+    "reliability": [],
+    "owned": [
+      "Agent design",
+      "WhatsApp integration",
+      "Handoff flow"
+    ],
+    "link": {
+      "label": "recruit-ai.co",
+      "href": "https://recruit-ai.co"
+    }
+  },
+  {
+    "slug": "rozeegpt",
+    "title": "RozeeGPT",
+    "context": "rozeegpt.ai",
+    "role": "Lead Software Engineer",
+    "period": "At Rozee.pk",
+    "summary": "A live AI recruiting product that keeps screening candidates: OpenAI embeddings, RAG and Apache Solr.",
+    "categories": [
+      "ai",
+      "saas"
+    ],
+    "image": {
+      "src": "/work/rozeegpt-hq.jpg",
+      "alt": "The rozeegpt.ai logo"
+    },
+    "logo": "/logos/rozeegpt.png",
+    "figures": [
+      {
+        "value": "5,000+",
+        "label": "Records screened a week"
+      },
+      {
+        "value": "~90%",
+        "label": "Matching accuracy"
+      },
+      {
+        "value": "Live",
+        "label": "Public product"
+      }
+    ],
+    "stack": [
+      "OpenAI embeddings",
+      "RAG",
+      "Apache Solr",
+      "Laravel",
+      "MySQL"
+    ],
+    "problem": "Recruiters spent hours reading CVs to shortlist candidates for each job.",
+    "built": [
+      "An AI matching engine built on OpenAI embeddings, RAG and Apache Solr.",
+      "Screening of 5,000+ records a week at about 90% matching accuracy.",
+      "A live, public product at rozeegpt.ai."
+    ],
+    "architecture": [
+      {
+        "title": "Inputs",
+        "items": [
+          "CVs",
+          "Job posts"
+        ]
+      },
+      {
+        "title": "Retrieval",
+        "items": [
+          "OpenAI embeddings",
+          "Apache Solr",
+          "Vector search"
+        ]
+      },
+      {
+        "title": "AI",
+        "items": [
+          "RAG",
+          "Matching"
+        ]
+      },
+      {
+        "title": "Output",
+        "items": [
+          "Screened candidates"
+        ]
+      }
+    ],
+    "reliability": [
+      "Matching quality is measured, at about 90% accuracy on 5,000+ weekly records."
+    ],
+    "owned": [
+      "Matching engine",
+      "Retrieval and ranking",
+      "Prompt pipeline"
+    ],
+    "link": {
+      "label": "rozeegpt.ai",
+      "href": "https://rozeegpt.ai"
+    }
+  },
+  {
+    "slug": "semantic-cv-search",
+    "title": "Semantic CV Search",
+    "context": "Enterprise recruitment platform",
+    "role": "Lead Software Engineer",
+    "period": "Recruitment platform",
+    "summary": "A million-scale RAG and semantic search system that matches candidates by intent, not just keywords.",
+    "categories": [
+      "ai"
+    ],
+    "image": {
+      "src": "/work/semantic-cv-search-hq.jpg",
+      "alt": "Million-scale RAG and semantic search: 1M+ CVs, Apache Solr and vector embeddings"
+    },
+    "figures": [
+      {
+        "value": "<250ms",
+        "label": "Query time"
+      },
+      {
+        "value": "1M+",
+        "label": "Documents indexed"
+      },
+      {
+        "value": "Zero-shot",
+        "label": "Intent matching"
+      }
+    ],
+    "stack": [
+      "Apache Solr",
+      "Vector embeddings",
+      "Pinecone / Weaviate",
+      "RAG",
+      "PHP"
+    ],
+    "problem": "Keyword search missed good candidates whose CVs used different words for the same skills.",
+    "built": [
+      "Hybrid search: Apache Solr for lexical matching, vector embeddings for meaning.",
+      "Semantic ranking that understands what the recruiter means.",
+      "Indexing for more than a million CVs."
+    ],
+    "architecture": [
+      {
+        "title": "Index",
+        "items": [
+          "CVs",
+          "Embeddings",
+          "Solr index"
+        ]
+      },
+      {
+        "title": "Query",
+        "items": [
+          "Lexical search",
+          "Vector search"
+        ]
+      },
+      {
+        "title": "Ranking",
+        "items": [
+          "Semantic re-rank",
+          "Results"
+        ]
+      }
+    ],
+    "reliability": [
+      "Queries answer in under 250ms at million-document scale."
+    ],
+    "owned": [
+      "Search architecture",
+      "Embedding pipeline",
+      "Ranking"
+    ]
+  },
+  {
+    "slug": "mylo",
+    "title": "Visit MYLO",
+    "context": "visitmylo.com",
+    "role": "Senior Software Engineer",
+    "period": "Aug 2023 to Oct 2024",
+    "summary": "A local business directory and marketplace: search, reviews, listings and payments.",
+    "categories": [
+      "saas",
+      "client"
+    ],
+    "image": {
+      "src": "/work/mylo-hq.jpg",
+      "alt": "The MYLO home page",
+      "address": "visitmylo.com"
+    },
+    "logo": "/logos/mylo.png",
+    "figures": [
+      {
+        "value": "Directory",
+        "label": "Search, reviews, listings"
+      },
+      {
+        "value": "Payments",
+        "label": "Multiple methods integrated"
+      }
+    ],
+    "stack": [
+      "PHP",
+      "Laravel",
+      "Livewire",
+      "MySQL",
+      "Payment gateways"
+    ],
+    "problem": "Local businesses needed one place to be found, reviewed and paid.",
+    "built": [
+      "The business directory system: listings, search and reviews.",
+      "Integration of multiple payment methods.",
+      "Relational schemas and query tuning for reporting and real-time analytics."
+    ],
+    "architecture": [
+      {
+        "title": "Visitors",
+        "items": [
+          "Search",
+          "Reviews"
+        ]
+      },
+      {
+        "title": "Platform",
+        "items": [
+          "Laravel",
+          "MySQL"
+        ]
+      },
+      {
+        "title": "Business tools",
+        "items": [
+          "Listings",
+          "Payments",
+          "Analytics"
+        ]
+      }
+    ],
+    "reliability": [
+      "Optimised queries keep reporting fast as listings grow."
+    ],
+    "owned": [
+      "System architecture",
+      "Backend",
+      "Payments integration"
+    ],
+    "link": {
+      "label": "visitmylo.com",
+      "href": "https://visitmylo.com"
+    }
+  },
+  {
+    "slug": "mylo-bulk-import",
+    "title": "MYLO Bulk Business Import",
+    "context": "MYLO data platform",
+    "role": "Backend & Systems",
+    "period": "Client project",
+    "summary": "An import pipeline that loads 50K to 100K business listings per run with full data integrity.",
+    "categories": [
+      "saas",
+      "client"
+    ],
+    "image": {
+      "src": "/work/mylo-bulk-import-cover-hq.jpg",
+      "alt": "MYLO bulk import engine: 50K to 100K listings per run, 95% faster, zero data loss"
+    },
+    "logo": "/logos/mylo.png",
+    "figures": [
+      {
+        "value": "50K to 100K",
+        "label": "Listings per run"
+      },
+      {
+        "value": "95%",
+        "label": "Faster than before"
+      },
+      {
+        "value": "0",
+        "label": "Records lost"
+      }
+    ],
+    "stack": [
+      "Laravel",
+      "Queues",
+      "MySQL",
+      "Batch processing",
+      "Monitoring"
+    ],
+    "problem": "Importing large business lists was slow and could lose or duplicate records when a run failed part way.",
+    "built": [
+      "A batch import engine that processes 50K to 100K listings per run.",
+      "Error recovery: a failed batch is retried without losing or duplicating records.",
+      "Real-time tracking of each run: throughput, time elapsed, failures."
+    ],
+    "architecture": [
+      {
+        "title": "Input",
+        "items": [
+          "Listing files",
+          "Validation"
+        ]
+      },
+      {
+        "title": "Engine",
+        "items": [
+          "Batches",
+          "Queue workers",
+          "Retries"
+        ]
+      },
+      {
+        "title": "Output",
+        "items": [
+          "Directory data",
+          "Run tracking",
+          "Monitoring"
+        ]
+      }
+    ],
+    "reliability": [
+      "Full data integrity checks on every run.",
+      "Smart error recovery and production monitoring."
+    ],
+    "owned": [
+      "Import engine",
+      "Recovery logic",
+      "Run tracking"
+    ]
+  },
+  {
+    "slug": "questflow",
+    "title": "QuestFlow",
+    "context": "Survey intelligence SaaS",
+    "role": "Senior Software Engineer",
+    "period": "Aug 2023 to Oct 2024",
+    "summary": "A survey SaaS to build, send and analyse surveys across channels.",
+    "categories": [
+      "saas",
+      "client"
+    ],
+    "image": {
+      "src": "/work/questflow-hq.jpg",
+      "alt": "QuestFlow: ask better questions, get sharper answers. 48K+ responses, 78% completion, 12 channels"
+    },
+    "figures": [
+      {
+        "value": "48K+",
+        "label": "Responses collected"
+      },
+      {
+        "value": "78%",
+        "label": "Completion rate"
+      },
+      {
+        "value": "12",
+        "label": "Channels"
+      }
+    ],
+    "stack": [
+      "PHP",
+      "Laravel",
+      "Livewire",
+      "MySQL"
+    ],
+    "problem": "Teams needed to ask better questions and read the answers without exporting spreadsheets.",
+    "built": [
+      "Survey building and distribution across channels.",
+      "Response collection and analysis dashboards.",
+      "Backend functionality in Laravel and Livewire."
+    ],
+    "architecture": [
+      {
+        "title": "Build",
+        "items": [
+          "Survey builder"
+        ]
+      },
+      {
+        "title": "Collect",
+        "items": [
+          "Channels",
+          "Responses"
+        ]
+      },
+      {
+        "title": "Analyse",
+        "items": [
+          "Reports",
+          "Dashboards"
+        ]
+      }
+    ],
+    "reliability": [
+      "Schemas and queries designed for real-time analytics."
+    ],
+    "owned": [
+      "Backend",
+      "Data model",
+      "Reporting"
+    ]
+  },
+  {
+    "slug": "smart-work-force",
+    "title": "Smart Work Force",
+    "context": "UK security company",
+    "role": "Software Engineer",
+    "period": "Feb 2020 to Jul 2023",
+    "summary": "Workforce management for a security firm: scheduling, real-time operations, GPS patrol tracking and a mobile app.",
+    "categories": [
+      "saas",
+      "client"
+    ],
+    "image": {
+      "src": "/work/smart-work-force-hq.jpg",
+      "alt": "The Smart Work Force home page",
+      "address": "smartworkforce.co.uk"
+    },
+    "logo": "/logos/smart-work-force.png",
+    "figures": [
+      {
+        "value": "Scheduling",
+        "label": "Shifts and rotas"
+      },
+      {
+        "value": "GPS",
+        "label": "Patrol tracking"
+      }
+    ],
+    "stack": [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Laravel",
+      "REST APIs"
+    ],
+    "problem": "A security company managed guards, shifts and patrols across sites with little real-time visibility.",
+    "built": [
+      "React, TypeScript and Redux applications with complex, dynamic components.",
+      "Scheduling and real-time operations views.",
+      "REST API integration with the Laravel backend; frontend performance work to cut load times."
+    ],
+    "architecture": [
+      {
+        "title": "Apps",
+        "items": [
+          "Web app",
+          "Mobile app"
+        ]
+      },
+      {
+        "title": "Backend",
+        "items": [
+          "Laravel APIs"
+        ]
+      },
+      {
+        "title": "Operations",
+        "items": [
+          "Schedules",
+          "Patrol GPS",
+          "Control room"
+        ]
+      }
+    ],
+    "reliability": [
+      "Caching and background jobs to handle growing load."
+    ],
+    "owned": [
+      "React applications",
+      "State management",
+      "API integration"
+    ],
+    "link": {
+      "label": "smartworkforce.co.uk",
+      "href": "https://smartworkforce.co.uk"
+    }
+  },
+  {
+    "slug": "payments-platform",
+    "title": "MYLO Payments (Laravel + NMI)",
+    "context": "VisitMYLO (US)",
+    "role": "Laravel Developer",
+    "period": "Jun 2025 to Mar 2026",
+    "summary": "A long-term engagement on the VisitMYLO Laravel 11 platform: NMI payment gateway integration, working inside the MYLO team.",
+    "categories": [
+      "client",
+      "integrations"
+    ],
+    "image": {
+      "src": "/work/mylo-portal-hq.jpg",
+      "alt": "The MYLO business portal, built on Laravel 11",
+      "address": "visitmylo.com · business portal"
+    },
+    "logo": "/logos/mylo.png",
+    "figures": [
+      {
+        "value": "1,076",
+        "label": "Hours delivered"
+      },
+      {
+        "value": "5.0",
+        "label": "Client review"
+      }
+    ],
+    "stack": [
+      "Laravel 11",
+      "PHP",
+      "NMI payment gateway",
+      "Payment integration"
+    ],
+    "problem": "VisitMYLO needed an experienced Laravel developer to work through difficult coding issues and the NMI payment gateway integration.",
+    "built": [
+      "Payment gateway integration with NMI.",
+      "Fixes and features across the VisitMYLO Laravel 11 codebase, working with the MYLO team."
+    ],
+    "architecture": [
+      {
+        "title": "App",
+        "items": [
+          "Laravel 11"
+        ]
+      },
+      {
+        "title": "Payments",
+        "items": [
+          "NMI payment gateway"
+        ]
+      }
+    ],
+    "reliability": [],
+    "owned": [
+      "Payment integration",
+      "Backend fixes and features"
+    ],
+    "link": {
+      "label": "visitmylo.com",
+      "href": "https://visitmylo.com"
+    }
+  }
+]

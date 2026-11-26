@@ -1,0 +1,75 @@
+[
+  {
+    "value": "Platform leadership",
+    "title": "Core systems for 100,000+ users on Pakistan's largest job platform",
+    "text": "Led AI screening, search, messaging and 12+ CRM integrations at Rozee.pk.",
+    "company": "Rozee.pk",
+    "logo": "/logos/rozee.svg",
+    "work": "rozee"
+  },
+  {
+    "value": "Fintech integrations",
+    "title": "Payment and loan flows on WhatsApp and the NMI gateway",
+    "text": "Loans and payments agents for job seekers, and card payments for a US marketplace.",
+    "company": "Rozee.pk · MYLO (US)",
+    "logoLabel": "Payments",
+    "work": "payments-platform"
+  },
+  {
+    "value": "Multi-agent AI",
+    "title": "Rozeena AI: three AI agents, from the first version",
+    "text": "One WhatsApp assistant for job alerts, loans and payments, run by three AI agents.",
+    "company": "Recruit AI · Rozeena AI",
+    "logo": "/logos/recruit-ai.png",
+    "work": "rozeena"
+  },
+  {
+    "value": "AI screening",
+    "title": "5,000+ candidates screened by AI each week",
+    "text": "About 90% matching accuracy on RozeeGPT.ai, a live public product.",
+    "company": "RozeeGPT.ai",
+    "logo": "/logos/rozeegpt-mark.png",
+    "work": "rozeegpt"
+  },
+  {
+    "value": "Search engine",
+    "title": "1M+ CVs searchable by intent, in under 250ms",
+    "text": "A dedicated CV and job search engine. Rozee.pk job search cut from 2s to 500ms.",
+    "company": "Rozee.pk search",
+    "logo": "/logos/rozee.svg",
+    "work": "semantic-cv-search"
+  },
+  {
+    "value": "Bernard AI",
+    "title": "An AI agent built from the ground up",
+    "text": "Daily domain picks for each client, plus live website checks and repairs a person approves.",
+    "company": "SerpDashboard (US)",
+    "logo": "/logos/bernard-monogram.svg",
+    "logoLabel": "Bernard",
+    "work": "bernard"
+  },
+  {
+    "value": "Enterprise backend",
+    "title": "200+ server providers connected in one backend",
+    "text": "Hosting and server providers connected, including Cloudflare, running websites at scale.",
+    "company": "SerpDashboard (US)",
+    "logo": "/logos/serpdashboard.svg",
+    "work": "serpdashboard"
+  },
+  {
+    "value": "Data integrations",
+    "title": "Business listing imports 95% faster for MYLO",
+    "text": "Bulk import of 50K to 100K business listings per run, with zero records lost.",
+    "company": "MYLO (US)",
+    "logo": "/logos/mylo.png",
+    "work": "mylo-bulk-import"
+  },
+  {
+    "value": "Real-time operations",
+    "title": "Workforce management for a UK security company",
+    "text": "Scheduling, live operations, GPS patrol tracking and a mobile app, in React and Laravel.",
+    "company": "Smart Workforce (UK)",
+    "logo": "/logos/smart-work-force.png",
+    "work": "smart-work-force"
+  }
+]

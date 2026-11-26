@@ -1,0 +1,123 @@
+{
+  "name": "Hafiz Talha",
+  "fullName": "Hafiz Muhammad Talha",
+  "titles": [
+    "Lead Software Engineer"
+  ],
+  "headline": "I design and build agentic software.",
+  "intro": "Lead Software Engineer with 7 years in production. I build SaaS platforms, web apps, APIs and AI features, and I own them end to end: from architecture and code to release and the day they run for real users. Today I lead SerpDashboard.",
+  "photo": "/hafiz-talha.jpg",
+  "roles": [
+    {
+      "label": "Tech Enthusiast"
+    },
+    {
+      "label": "Founder of Autonomia"
+    }
+  ],
+  "location": "Lahore, Pakistan · working remotely",
+  "email": "talhahafiz145@gmail.com",
+  "siteUrl": "https://hafiz-talha.vercel.app",
+  "cvPath": "/Hafiz_Talha_CV.pdf",
+  "links": {
+    "linkedin": {
+      "label": "linkedin.com/in/hafiztalha",
+      "href": "https://linkedin.com/in/hafiztalha"
+    },
+    "github": {
+      "label": "@talhasir",
+      "href": "https://github.com/talhasir"
+    },
+    "upwork": "https://www.upwork.com/freelancers/~015c4098cbbe91a0a2"
+  },
+  "companies": [
+    {
+      "name": "Rozee.pk",
+      "logo": "/logos/trimmed/rozee.png",
+      "ratio": 2.91
+    },
+    {
+      "name": "RozeeGPT.ai",
+      "logo": "/logos/trimmed/rozeegpt-mark.png",
+      "ratio": 6.67
+    },
+    {
+      "name": "Recruit AI",
+      "logo": "/logos/trimmed/recruit-ai.png",
+      "ratio": 6.81
+    },
+    {
+      "name": "SerpDashboard",
+      "logo": "/logos/trimmed/serpdashboard.png",
+      "ratio": 3.32
+    },
+    {
+      "name": "MYLO",
+      "logo": "/logos/trimmed/mylo.png",
+      "ratio": 3.35
+    },
+    {
+      "name": "Smart Workforce",
+      "logo": "/logos/trimmed/smart-work-force.png",
+      "ratio": 4.61
+    }
+  ],
+  "about": {
+    "title": "About Hafiz Talha",
+    "subtitle": "From software engineer to system owner",
+    "paragraphs": [
+      "Hafiz Talha is a Lead Software Engineer from Lahore, Pakistan, with 7 years of building software that runs in production. He started as a software engineer at Khired Networks, building React and Laravel apps for Smart Workforce, a UK security company. Since then he has moved from writing features to owning whole platforms: the architecture, the code, the release and keeping it running.",
+      "At Rozee.pk, Pakistan's largest job platform with 100,000+ users, he led the core systems behind recruitment: AI candidate screening, faster search, WhatsApp messaging and CRM integrations. He built the AI behind RozeeGPT.ai, a live AI recruiter, and Rozeena AI, a WhatsApp career assistant where three AI agents work together and hand off to each other.",
+      "Today he works with US-based companies. He leads SerpDashboard, a platform that runs websites across its own fleet of hosting servers, with Bernard AI checking and repairing those websites under human approval. For VisitMYLO, a US local marketplace, he built the payment side on the NMI gateway, his work in fintech.",
+      "His focus is agentic software: AI that does real work inside a company's own systems, with people in control of every change."
+    ],
+    "glance": [
+      {
+        "label": "Now",
+        "value": "System Owner & Lead Software Engineer, SerpDashboard (US)"
+      },
+      {
+        "label": "Before",
+        "value": "Lead Software Engineer, Rozee.pk"
+      },
+      {
+        "label": "Founder",
+        "value": "Autonomia, an AI agent agency",
+        "logo": "/logos/autonomia.svg"
+      },
+      {
+        "label": "AI products",
+        "value": "RozeeGPT.ai, Rozeena AI, Bernard AI"
+      },
+      {
+        "label": "Industries",
+        "value": "Recruitment, fintech, SaaS, web hosting"
+      },
+      {
+        "label": "Based in",
+        "value": "Lahore, Pakistan · working remotely"
+      }
+    ]
+  },
+  "vision": [
+    {
+      "key": "tech",
+      "tab": "Tech innovation",
+      "title": "Building agentic software that does real work",
+      "paragraphs": [
+        "Hafiz Talha builds agentic software: AI agents that work inside a company's own systems, read its data and take real actions, with people in control of every change. His products put AI to work on real business tasks, from screening candidates on RozeeGPT.ai and answering career questions on Rozeena AI to checking and repairing live websites with Bernard AI.",
+        "He believes the next step for software is AI that companies can trust in production: every action logged, reviewed and reversible, and every result measured."
+      ]
+    },
+    {
+      "key": "leadership",
+      "tab": "Leadership growth",
+      "title": "Founder of Autonomia",
+      "paragraphs": [
+        "As the founder of Autonomia, an AI agent agency, Hafiz helps companies bring AI agents into their own systems: workflow automation, integrations with their CRMs and databases, and agents on WhatsApp, Telegram and the web.",
+        "He has grown from software engineer to system owner, leading platforms for Pakistan's largest job platform and for US-based companies. His aim is to build a team that delivers agentic software to companies around the world, and to help more engineers from Pakistan do the same."
+      ],
+      "logo": "/logos/autonomia.svg"
+    }
+  ]
+}

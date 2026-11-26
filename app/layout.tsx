@@ -1,39 +1,49 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { JetBrains_Mono } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Open_Sans, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { profile } from "@/content/profile"
+import { site } from "@/content/site"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-const _jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans", display: "swap" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono", display: "swap" })
+
+const { title, description, keywords } = site.seo
 
 export const metadata: Metadata = {
-  title: "Hafiz Talha | Founder & Senior AI Engineer",
-  description:
-    "Founder of Autonomia & Senior AI Engineer. I merge battle-tested backend architectures with cutting-edge Agentic AI to build autonomous systems that execute enterprise workflows without human intervention.",
-  keywords: ["Agentic AI", "Laravel Developer", "AI Automation", "Senior PHP Engineer", "WhatsApp Business API"],
-  authors: [{ name: "Hafiz Talha" }],
-  openGraph: {
-    title: "Hafiz Talha | Founder & Senior AI Engineer",
-    description: "Building autonomous AI systems that execute enterprise workflows.",
-    type: "website",
-  },
-  generator: 'v0.app'
+  metadataBase: new URL(profile.siteUrl),
+  title: { default: title, template: `%s | ${profile.name}` },
+  description,
+  keywords,
+  authors: [{ name: profile.name, url: profile.siteUrl }],
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", url: "/", siteName: profile.name, title, description },
+  twitter: { card: "summary_large_image", title, description },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export const viewport: Viewport = { themeColor: "#ffffff", colorScheme: "light" }
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.fullName,
+  alternateName: profile.name,
+  jobTitle: profile.titles[0],
+  email: `mailto:${profile.email}`,
+  url: profile.siteUrl,
+  image: `${profile.siteUrl}${profile.photo}`,
+  sameAs: [profile.links.linkedin.href, profile.links.github.href, profile.links.upwork].filter(Boolean),
+  knowsAbout: ["Laravel", "PHP", "Node.js", "Python", "AI agents", "RAG", "CRM integrations", "WhatsApp Business API"],
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="en" className={`${openSans.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
+      <body className="font-sans">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
         {children}
         <Analytics />
       </body>

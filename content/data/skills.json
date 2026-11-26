@@ -1,0 +1,106 @@
+{
+  "groups": [
+    {
+      "group": "Backend",
+      "items": [
+        "PHP 8",
+        "Laravel",
+        "Livewire",
+        "Symfony",
+        "Node.js",
+        "Python",
+        "REST APIs",
+        "Queues and jobs"
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        "React",
+        "TypeScript",
+        "Vue",
+        "Redux",
+        "HTML and CSS",
+        "Responsive UI"
+      ]
+    },
+    {
+      "group": "AI",
+      "items": [
+        "OpenAI",
+        "Anthropic",
+        "Gemini",
+        "Groq",
+        "RAG",
+        "Embeddings",
+        "AI agents",
+        "Vision models",
+        "ElevenLabs"
+      ]
+    },
+    {
+      "group": "Data & Search",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "OpenSearch",
+        "Apache Solr",
+        "Pinecone / Weaviate"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "items": [
+        "Payment gateways (Stripe, NMI)",
+        "WhatsApp Business API",
+        "Twilio",
+        "Meta Conversions API",
+        "CRMs",
+        "Webhooks"
+      ]
+    },
+    {
+      "group": "DevOps & Cloud",
+      "items": [
+        "Git",
+        "CI/CD",
+        "Docker",
+        "Linux",
+        "Nginx",
+        "GCP",
+        "WHM/cPanel",
+        "Cloudflare R2"
+      ]
+    },
+    {
+      "group": "Quality & Operations",
+      "items": [
+        "PHPUnit",
+        "Code reviews",
+        "Monitoring",
+        "Idempotency",
+        "Retries and backoff",
+        "Backups and restore"
+      ]
+    }
+  ],
+  "principles": [
+    {
+      "title": "Own it in production",
+      "text": "I build it, release it and stay on it when something breaks, then write down the cause and the fix."
+    },
+    {
+      "title": "Integrations that survive failure",
+      "text": "Webhooks stored before processing, idempotent writes, retries with backoff, so one bad call never doubles or loses data."
+    },
+    {
+      "title": "AI with a person in the loop",
+      "text": "AI proposes, a person approves, and every change can be undone."
+    },
+    {
+      "title": "Measured releases",
+      "text": "Small changes, checked before and after release, with backups ready."
+    }
+  ]
+}

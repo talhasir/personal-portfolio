@@ -1,0 +1,99 @@
+{
+  "roles": [
+    {
+      "company": "SerpDashboard",
+      "title": "System Owner & Lead Software Engineer",
+      "period": "Mar 2026 to present",
+      "current": true,
+      "points": [
+        "Own an SEO and domain automation SaaS end to end: architecture, build, release and production support.",
+        "Built a provider-agnostic AI layer, the Bernard agent and an AI website-repair pipeline with human approval.",
+        "Integrated 10+ external APIs, with idempotent webhooks, retries and automatic rollback."
+      ],
+      "tags": [
+        "Laravel 13",
+        "React",
+        "PostgreSQL",
+        "Redis",
+        "OpenSearch",
+        "Node.js",
+        "Python"
+      ],
+      "work": [
+        "serpdashboard",
+        "bernard"
+      ]
+    },
+    {
+      "company": "Rozee.pk",
+      "title": "Lead Software Engineer",
+      "period": "Nov 2024 to Feb 2026",
+      "points": [
+        "Led backend architecture for a recruitment platform serving 100,000+ users.",
+        "Built AI screening for 5,000+ candidates a week, RozeeGPT and the Rozeena WhatsApp agents.",
+        "WhatsApp Business API, Twilio and Meta Conversions API integrations, and APIs for 12+ CRMs.",
+        "Cut core search time from 2s to 500ms."
+      ],
+      "tags": [
+        "Laravel",
+        "Livewire",
+        "MySQL",
+        "Apache Solr",
+        "OpenAI",
+        "WhatsApp API"
+      ],
+      "work": [
+        "rozee",
+        "rozeena",
+        "rozeegpt",
+        "semantic-cv-search"
+      ]
+    },
+    {
+      "company": "VisitMYLO",
+      "title": "Senior Software Engineer",
+      "period": "Aug 2023 to Oct 2024",
+      "points": [
+        "Architected MyLo, a business directory with multiple payment methods.",
+        "Built backend APIs and schemas for e-commerce and survey SaaS (QuestFlow).",
+        "Optimised queries for reporting and real-time analytics."
+      ],
+      "tags": [
+        "Laravel",
+        "Livewire",
+        "MySQL",
+        "Payments"
+      ],
+      "work": [
+        "mylo",
+        "mylo-bulk-import",
+        "questflow"
+      ]
+    },
+    {
+      "company": "Khired Networks",
+      "title": "Software Engineer",
+      "period": "Feb 2020 to Jul 2023",
+      "points": [
+        "Built React, TypeScript and Redux apps for a UK security firm (Smart Work Force) on a Laravel backend.",
+        "Built REST API integrations, caching and background jobs."
+      ],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Laravel"
+      ],
+      "work": [
+        "smart-work-force"
+      ]
+    }
+  ],
+  "alongside": [
+    {
+      "title": "Senior engineer for international clients",
+      "text": "20+ projects delivered to production for companies in the US, UK and Saudi Arabia, every one rated 5.0 by the client.",
+      "work": "payments-platform"
+    }
+  ]
+}

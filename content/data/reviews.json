@@ -1,0 +1,92 @@
+[
+  {
+    "quote": "Hafiz did a fantastic job with our real world testing project. He is a great communicator, timely and quite talented.",
+    "project": "Full-Stack Developer Test Project",
+    "period": "Apr 2026",
+    "rating": 5,
+    "endorsements": [
+      "Reliable",
+      "Committed to Quality",
+      "Clear Communicator"
+    ]
+  },
+  {
+    "quote": "Hafiz, did a great job for us working though some difficult coding issues. He worked well with our team, and I would not hesitate to hire him again.",
+    "project": "VisitMYLO: Laravel 11 + NMI payment gateway",
+    "country": "United States",
+    "period": "Jun 2025 to Mar 2026",
+    "rating": 5,
+    "endorsements": [
+      "Collaborative",
+      "Committed to Quality",
+      "Clear Communicator",
+      "Detail Oriented"
+    ]
+  },
+  {
+    "quote": "Well done. easy to work with recommended.",
+    "project": "Full Stack Developer for Excel Import and Data Management",
+    "country": "Aruba",
+    "period": "Nov 2025 to May 2026",
+    "rating": 5,
+    "endorsements": [
+      "Committed to Quality",
+      "Solution Oriented",
+      "Detail Oriented"
+    ]
+  },
+  {
+    "quote": "Very professional and efficient – delivered the chatbot integration on time and provided clear instructions for use.",
+    "project": "Quick AI Chatbot Integration for Website/App",
+    "country": "Saudi Arabia",
+    "period": "Sep 2025",
+    "rating": 5,
+    "endorsements": [
+      "Professional",
+      "Reliable",
+      "Clear Communicator"
+    ]
+  },
+  {
+    "quote": "Delivered maintainable, on-time solutions with clear communication – highly recommend!",
+    "project": "Laravel luggage booking module with Stripe",
+    "country": "Pakistan",
+    "period": "May 2025",
+    "rating": 5,
+    "endorsements": [
+      "Committed to Quality",
+      "Reliable",
+      "Clear Communicator"
+    ]
+  },
+  {
+    "quote": "Highly Recommended!",
+    "project": "Laravel module for AI-powered job matching",
+    "country": "Pakistan",
+    "period": "May 2025",
+    "rating": 5,
+    "endorsements": []
+  },
+  {
+    "quote": "Perfectly done. Communication was great and completed the job really quickly to perfection",
+    "project": "PHP/MySQL system modifications",
+    "country": "Pakistan",
+    "period": "Apr 2025",
+    "rating": 5,
+    "endorsements": [
+      "Clear Communicator",
+      "Committed to Quality"
+    ]
+  },
+  {
+    "quote": "Professional and skilled developer. Highly recommended",
+    "project": "Full-Stack Developer for website bug fixes",
+    "country": "United States",
+    "period": "Mar 2025",
+    "rating": 5,
+    "endorsements": [
+      "Professional",
+      "Committed to Quality"
+    ]
+  }
+]

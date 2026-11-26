@@ -1,0 +1,77 @@
+{
+  "seo": {
+    "title": "Hafiz Talha | Lead Software Engineer",
+    "description": "Lead Software Engineer. 7 years designing, building and running production software: SaaS platforms, web apps, APIs, AI features and integrations, end to end.",
+    "keywords": [
+      "Lead Software Engineer",
+      "Full-stack developer",
+      "Laravel",
+      "PHP",
+      "React",
+      "Node.js",
+      "Python",
+      "SaaS development",
+      "AI agents",
+      "API integrations"
+    ]
+  },
+  "hero": {
+    "workButton": "See my work",
+    "cvButton": "Download CV",
+    "builtForLabel": "Built for"
+  },
+  "about": {
+    "eyebrow": "About"
+  },
+  "vision": {
+    "eyebrow": "Vision",
+    "title": "Where the work is going"
+  },
+  "achievements": {
+    "eyebrow": "Recognition",
+    "title": "Achievements & recognition",
+    "intro": "Work with some of the biggest companies in Pakistan and the US, and what we built together.",
+    "reviewsTitle": "What clients say",
+    "reviewsIntro": "reviews from completed projects, all rated 5.0.",
+    "reviewsButton": "See the verified reviews"
+  },
+  "collaborations": {
+    "eyebrow": "Collaborations",
+    "title": "Companies I build with",
+    "intro": "What I built for each one."
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "7 years of production software",
+    "intro": "The same roles and dates as my CV."
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "What I work with",
+    "intro": "What I have built with, shipped and run in production."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact & collaborations",
+    "intro": "Let's connect and explore how we can work together.",
+    "messageTitle": "Send a quick message",
+    "messageIntro": "Share your project, role or question and get a personal reply within a day.",
+    "helpTitle": "What can I help you with?",
+    "helpWith": [
+      "Agentic software and AI agents",
+      "SaaS platforms and integrations",
+      "Senior and lead engineering roles",
+      "AI adoption with Autonomia",
+      "Interviews and podcasts"
+    ],
+    "touchTitle": "Get in touch",
+    "opportunitiesTitle": "Collaboration opportunities",
+    "opportunities": [
+      "Technical leadership roles",
+      "Agentic software projects",
+      "Partnerships with Autonomia",
+      "Speaking, podcasts and interviews",
+      "Mentoring engineers"
+    ]
+  }
+}

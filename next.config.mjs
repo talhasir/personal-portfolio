@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
+  poweredByHeader: false,
+  // Covers are served at 90 so screenshots and text stay sharp.
+  images: { qualities: [75, 90] },
 }
 
 export default nextConfig
